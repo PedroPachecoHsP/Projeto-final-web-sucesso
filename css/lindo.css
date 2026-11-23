@@ -1,0 +1,294 @@
+
+:root,
+[data-bs-theme=light] {
+  --asfalto: #14181c;
+  --trilha: #2c6e3f;
+  --trilha-escuro: #1f5230;
+  --colete: #d4f23a;
+  --sol: #c2410c;
+  --sol-escuro: #9a3412;
+  --superficie: #ffffff;
+  --foco: #2c6e3f;
+
+  --fonte-titulo: "Big Shoulders Display", "Arial Narrow", "Segoe UI", system-ui, sans-serif;
+  --fonte-texto: "Work Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  
+  --bs-body-font-family: var(--fonte-texto);
+  --bs-body-font-size: 1.0625rem;
+  --bs-body-bg: #f1f3f2;
+  --bs-body-bg-rgb: 241, 243, 242;
+  --bs-body-color: #14181c;
+  --bs-body-color-rgb: 20, 24, 28;
+  --bs-tertiary-bg: #e4e8e6;
+  --bs-border-color: #cdd4d1;
+  --bs-primary: #2c6e3f;
+  --bs-primary-rgb: 44, 110, 63;
+  --bs-primary-bg-subtle: #dcefe1;
+  --bs-primary-text-emphasis: #1c4a2b;
+  --bs-primary-border-subtle: #a9d2b5;
+  --bs-link-color: #2c6e3f;
+  --bs-link-color-rgb: 44, 110, 63;
+  --bs-link-hover-color: #1f5230;
+  --bs-link-hover-color-rgb: 31, 82, 48;
+  --bs-focus-ring-color: rgba(44, 110, 63, 0.35);
+}
+
+[data-bs-theme=dark] {
+  --superficie: #181e23;
+  --foco: #d4f23a;
+
+  --bs-body-bg: #101418;
+  --bs-body-bg-rgb: 16, 20, 24;
+  --bs-body-color: #e4e8e6;
+  --bs-body-color-rgb: 228, 232, 230;
+  --bs-tertiary-bg: #181e23;
+  --bs-border-color: #2b343a;
+  --bs-primary-bg-subtle: #1c2a1f;
+  --bs-primary-text-emphasis: #d4f23a;
+  --bs-primary-border-subtle: #2b3d2f;
+  --bs-link-color: #d4f23a;
+  --bs-link-color-rgb: 212, 242, 58;
+  --bs-link-hover-color: #e6f98a;
+  --bs-link-hover-color-rgb: 230, 249, 138;
+  --bs-focus-ring-color: rgba(212, 242, 58, 0.4);
+}
+
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.titulo-pagina {
+  margin: 1.5rem 0 1rem;
+  font-size: clamp(2.75rem, 11vw, 5.5rem);
+  color: var(--bs-primary-text-emphasis);
+  text-align: center;
+}
+
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+.navbar.bg-dark {
+  background-color: var(--asfalto) !important;
+}
+
+.navbar[data-bs-theme=dark] {
+  --bs-navbar-color: rgba(255, 255, 255, 0.82);
+  --bs-navbar-hover-color: var(--colete);
+  --bs-navbar-active-color: #fff;
+  --foco: #d4f23a;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.navbar-brand i {
+  color: var(--colete);
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+}
+
+.btn-tema {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: rgba(255, 255, 255, 0.45);
+  --bs-btn-hover-bg: rgba(255, 255, 255, 0.12);
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: rgba(255, 255, 255, 0.2);
+  --bs-btn-active-color: #fff;
+}
+
+.carousel {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  height: clamp(240px, 44vw, 480px);
+  object-fit: cover;
+}
+
+.carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem 3.5rem 1.5rem;
+  text-align: left;
+  background: linear-gradient(transparent, rgba(10, 13, 16, 0.9));
+}
+
+.carousel-caption h2 {
+  margin-bottom: 0.25rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: #fff;
+}
+
+.carousel-caption p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 575.98px) {
+  .carousel-caption {
+    padding: 2rem 1rem 2.75rem;
+  }
+}
+
+.secao {
+  padding-block: 3rem;
+  scroll-margin-top: 4.5rem; /* não deixa a barra fixa cobrir o título */
+}
+
+.texto-artigo p {
+  max-width: 65ch;
+}
+
+.card-treino {
+  --cor-tipo: var(--trilha);
+  --bs-card-bg: var(--superficie);
+  height: 100%;
+  border: 1px solid var(--bs-border-color);
+  border-top: 6px solid var(--cor-tipo);
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.card-treino .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-treino .card-title {
+  font-size: 1.8rem;
+}
+
+.card-treino .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-treino .card-body .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.tipo-rodagem { --cor-tipo: #2c6e3f; }
+.tipo-tiros   { --cor-tipo: #c2410c; }
+.tipo-longao  { --cor-tipo: #1d5fa8; }
+.tipo-fartlek { --cor-tipo: #7a3fa0; }
+
+.btn-trilha {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--trilha);
+  --bs-btn-border-color: var(--trilha);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--trilha-escuro);
+  --bs-btn-hover-border-color: var(--trilha-escuro);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--trilha-escuro);
+  --bs-btn-active-border-color: var(--trilha-escuro);
+}
+
+.btn-sol {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--sol);
+  --bs-btn-border-color: var(--sol);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--sol-escuro);
+  --bs-btn-hover-border-color: var(--sol-escuro);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--sol-escuro);
+  --bs-btn-active-border-color: var(--sol-escuro);
+}
+
+.placar {
+  padding: 1.5rem;
+  background: #0d1013;
+  color: #e4e8e6;
+  border: 1px solid #2b343a;
+  border-radius: 0.5rem;
+}
+
+.placar-rotulo {
+  margin: 0;
+  color: #9aa7a3;
+  font-size: 0.95rem;
+}
+
+.placar-valor {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(3.5rem, 14vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--colete);
+  font-variant-numeric: tabular-nums;
+}
+
+.placar-sub {
+  margin: 0.5rem 0 1.25rem;
+}
+
+.placar-tabela {
+  --bs-table-bg: transparent;
+  --bs-table-color: #e4e8e6;
+  --bs-table-border-color: rgba(212, 242, 58, 0.25);
+  font-variant-numeric: tabular-nums;
+}
+
+.placar-tabela caption {
+  color: #9aa7a3;
+}
+
+.voltar-topo {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1030;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.voltar-topo.visivel {
+  opacity: 1;
+  visibility: visible;
+}
+
+.rodape {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background: var(--asfalto);
+  color: #cfd6d3;
+}
+
+.rodape a {
+  color: var(--colete);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
